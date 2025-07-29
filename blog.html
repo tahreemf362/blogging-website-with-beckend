@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Blogging Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      display: flex;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #f3bbdc;
+      min-height: 100vh;
+      padding: 20px;
+      border-right: 1px solid #e0b5ce;
+    }
+    .sidebar img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px 0;
+      color: #d43f8a;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .sidebar a:hover {
+      color: #e6d8e0;
+    }
+    .main-content {
+      flex: 1;
+      padding: 30px;
+    }
+    .carousel-img {
+      height: 400px;
+      object-fit: cover;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .settings-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #FB6F92;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Settings Button -->
+  <button class="settings-btn" data-bs-toggle="modal" data-bs-target="#settingsModal">Settings</button>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="idea.jpg" alt="Idea Image">
+    <a href="#">Home</a>
+    <a href="#mostpopular">Most Popular</a>
+    <a href="#loginsignin">Log in / Sign in</a>
+    <a href="#helpcenter">Help Center</a>
+    <a href="index.html">Home</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Carousel -->
+    <div id="mainCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="ob.png" class="d-block w-100 carousel-img" alt="Banner">
+        </div>
+      </div>
+    </div>
+
+    <h1 class="text-center mb-5">Welcome to Blogging</h1>
+
+    <!-- Most Popular Section -->
+    <h2 id="mostpopular" class="text-center mb-4">Most Popular</h2>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="m.jpeg" class="card-img-top" alt="Mountains">
+          <div class="card-body">
+            <h5 class="card-title">Why I Like Mountains</h5>
+            <p class="card-text">Mountains are magical and calming.</p>
+            <a href="#loginsignin" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="beach.PNG" class="card-img-top" alt="Beaches">
+          <div class="card-body">
+            <h5 class="card-title">Beaches View</h5>
+            <p class="card-text">Beaches bring peace like no other.</p>
+            <a href="#loginsignin" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="river.PNG" class="card-img-top" alt="Rivers">
+          <div class="card-body">
+            <h5 class="card-title">Rivers</h5>
+            <p class="card-text">Rivers flow like time—always moving.</p>
+            <a href="#loginsignin" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login / Sign Up Section -->
+    <h2 id="loginsignin" class="text-center mb-4 fw-bold">Login / Sign Up Form</h2>
+    <div class="container mt-5 mb-5">
+      <div class="row justify-content-center align-items-start">
+        <!-- Login -->
+        <div class="col-md-5">
+          <div class="p-4 border rounded shadow-sm">
+            <h4 class="mb-3 text-center">Login</h4>
+            <form id="loginForm" method="POST" action="/login">
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="loginEmail" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="loginPassword" name="password" required>
+              </div>
+              <button type="submit" class="btn w-100" style="background-color: #FB6F92; color: white;">Login</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-1 d-flex justify-content-center align-items-center">
+          <div style="width: 3px; height: 100%; background-color: #FB6F92;"></div>
+        </div>
+
+        <!-- Sign Up -->
+        <div class="col-md-5">
+          <div class="p-4 border rounded shadow-sm">
+            <h4 class="mb-3 text-center">Sign Up</h4>
+            <form id="signupForm" method="POST" action="/signup">
+              <div class="mb-3">
+                <label for="signupEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="signupEmail" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="signupPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="signupPassword" name="password" required>
+              </div>
+              <div class="mb-3">
+                <label for="signupConfirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="signupConfirmPassword" required>
+              </div>
+              <button type="submit" class="btn w-100" style="background-color: #FB6F92; color: white;">Sign Up</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Help Center / FAQ Section -->
+    <section id="helpcenter" class="container my-5">
+      <h2 class="text-center mb-4">Help Center - FAQ</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+              How do I post a blog?
+            </button>
+          </h2>
+          <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              First, log in or sign up. Then go to your dashboard and click “Create Post”.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+              How can I contact support?
+            </button>
+          </h2>
+          <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              You can contact us at: <strong>support@yourblogsite.com</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Settings Modal -->
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="settingsModalLabel">Account Settings</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="privateAccount">
+              <label class="form-check-label" for="privateAccount">
+                Private Account
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+      <p class="mb-0">© 2025 Blogify. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Note: No inline login redirect script -->
+  <script src="script.js"></script>
+</body>
+</html>
