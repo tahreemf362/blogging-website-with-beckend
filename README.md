@@ -33,8 +33,18 @@ This project demonstrates a *full-stack web application* with:
 ---
 # **Screenshots** 
 *Commands to install packages*
-1. go in server
-   ![Server](Server.PNG)
+
+   ![Server](server.PNG)
+
+   ![Connected](connect.PNG)
+
+   *Open localhost3000 , Your Webpage will open*
+
+   ![HOMEPAGE](ss1.PNG)
+
+   ![DASHBOARD](dashboard.PNG)
+
+   ![USERS](users.PNG)
 
 ## 🛠 Technologies Used
 
