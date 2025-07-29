@@ -40,9 +40,14 @@ This project demonstrates a *full-stack web application* with:
 
    *Open localhost3000 , Your Webpage will open*
 
-   ![HOMEPAGE](ss1.PNG)
+   ![HOMEPAGE](ss1.png)
 
-   ![DASHBOARD](dashboard.PNG)
+   LOGIN AND DASHBOARD WILL OPEN , YOU CAN POST HERE ,AND CAN ADD PRIVACY
+
+   ![DASHBOARD](dashboard.png)
+
+   YOU CAN SEE REGISTER USERS TOO 
+   
 
    ![USERS](users.PNG)
 
