@@ -31,6 +31,10 @@ This project demonstrates a *full-stack web application* with:
 7. 🖥 **Frontend + Backend Integration**
 
 ---
+# **Screenshots** 
+*Commands to install packages*
+1. go in server
+   ![Server](Server.PNG)
 
 ## 🛠 Technologies Used
 
